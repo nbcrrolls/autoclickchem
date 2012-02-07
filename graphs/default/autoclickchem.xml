@@ -1,0 +1,24 @@
+<?xml version="1.0" standalone="no"?>
+
+<graph>
+
+	<description>
+
+	The AutoClickChem Roll
+
+	</description>
+
+	<copyright>
+	</copyright>
+
+	<changelog>
+	$Log: autoclickchem.xml,v $
+	Revision 1.1  2012/02/07 02:08:56  nadya
+	initial
+	
+	</changelog>
+
+        <edge from="server" to="autoclickchem-server"/>
+        <edge from="client" to="autoclickchem-client"/>
+
+</graph>

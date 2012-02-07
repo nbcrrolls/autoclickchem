@@ -1,0 +1,23 @@
+<preface id="preface" xreflabel="preface">
+<title>Preface</title>
+
+
+<para>
+The AutoClickChem Roll installs and configures the AutoClickChem opal service, the AutoClickChem program, and the AutoClickChem web interface. AutoClickChem is a computer program capable of performing click-chemistry reactions in silico. AutoClickChem can be used to produce large combinatorial libraries of compounds for use in virtual screens. As the compounds of these libraries are constructed according to the reactions of click chemistry, they can be easily synthesized for subsequent testing in biochemical assays. Additionally, in silico modeling of click-chemistry products may prove useful in rational drug design and drug optimization. 
+</para>
+
+
+<para>
+Please visit the <ulink
+url="http://autoclick.ucsd.edu">AutoClickChem
+site</ulink> to learn more about their release and the individual
+software components.
+</para>
+
+<para>
+Prior to installing the AutoClickChem roll, be sure to install the OpenBabel roll, as AutoClickChem depends on OpenBabel. Also, for 
+the AutoClickChem website to function properly, opal must operate through port 8080. If opal uses a different port on your system, 
+modify the files /var/www/html/autoclickchem/vars.ini and /var/www/html/autoclickchem/vars.default
+</para>
+
+</preface>

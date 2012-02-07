@@ -1,0 +1,22 @@
+<?xml version="1.0" standalone="no"?>
+
+<kickstart>
+
+	<description>
+	AutoClickChem client
+	</description>
+
+	<copyright>
+	</copyright>
+
+	<changelog>
+	$Log: autoclickchem-client.xml,v $
+	Revision 1.1  2012/02/07 02:08:56  nadya
+	initial
+	
+	
+	</changelog>
+
+	<package>autoclickchem</package>
+
+</kickstart>

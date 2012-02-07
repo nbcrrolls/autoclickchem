@@ -1,0 +1,26 @@
+<chapter id="using" xreflabel="Using the AutoClickChem Roll">
+
+
+<title>Using the AutoClickChem Roll</title>
+
+<section id="using-autoclickchem" xreflabel="Using the autoclickchem roll">
+<title>Using the AutoClickChem Roll</title>
+
+<para>
+AutoClickChem is a program capable of performing click-chemistry reactions in silico. AutoClickChem can be used to produce 
+large combinatorial libraries of compounds for use in virtual screens. As the compounds of these libraries are constructed 
+according to the reactions of click chemistry, they can be easily synthesized for subsequent testing in biochemical assays. 
+Additionally, in silico modeling of click-chemistry products may prove useful in rational drug design and drug optimization. 
+
+</para>
+
+<para>
+Tutorials for using AutoClickChem and its components are available
+from the <ulink url="http://rocce.ucsd.edu/autoclickchem/tutorial.php">
+AutoClickChem web site</ulink>
+</para>
+
+</section>
+
+
+</chapter>
