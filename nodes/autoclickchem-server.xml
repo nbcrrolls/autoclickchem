@@ -11,6 +11,9 @@
 
 	<changelog>
 	$Log: autoclickchem-server.xml,v $
+	Revision 1.2  2012/06/12 19:36:44  clem
+	added autoclick chem
+	
 	Revision 1.1  2012/02/07 02:08:56  nadya
 	initial
 	
@@ -23,36 +26,52 @@
 
 <post>
 
+
+SERVER_NAME="&opal_public_fqdn;"
+if [ "$SERVER_NAME" == "" ] ; then
+	#if this is a frontend installation the 
+	#opal_public_fqdn is not set yet
+	SERVER_NAME="&Kickstart_PublicHostname;"
+fi
+
+
+
+<file name="/var/www/html/autoclickchem/vars.ini" perm="0644" vars="expanded">
+temp_write_dir	/tmp/autoclickchem_tmp/
+max_upload_size_in_bytes	1048576
+max_reactant_pairs_allowed	100
+opal_url_root	http://$SERVER_NAME/opal-jobs/
+WSDL_URL_for_programmatic_access	http://$SERVER_NAME/opal2/services/AutoClickChem
+location_of_opal_submission_script	/opt/autoclickchem/opal_submit/runOPAL_cmd_line.sh
+</file>
+
+
 <file name="/var/www/html/autoclickchem/vars.ini" perm="0644">
 temp_write_dir	/tmp/autoclickchem_tmp/
 max_upload_size_in_bytes	1048576
 max_reactant_pairs_allowed	100
-opal_url_root	http://&Kickstart_PublicHostname;/opal-jobs/
-WSDL_URL_for_programmatic_access	http://&Kickstart_PublicHostname;/opal2/services/AutoClickChem
+opal_url_root	http://$SERVER_NAME/opal-jobs/
+WSDL_URL_for_programmatic_access	http://$SERVER_NAME/opal2/services/AutoClickChem
 location_of_opal_submission_script	/opt/autoclickchem/opal_submit/runOPAL_cmd_line.sh
 </file>
 
-<file name="/var/www/html/autoclickchem/vars.default" perm="0644">
-temp_write_dir	/tmp/autoclickchem_tmp/
-max_upload_size_in_bytes	1048576
-max_reactant_pairs_allowed	100
-opal_url_root	http://&Kickstart_PublicHostname;/opal-jobs/
-WSDL_URL_for_programmatic_access	http://&Kickstart_PublicHostname;/opal2/services/AutoClickChem
-location_of_opal_submission_script	/opt/autoclickchem/opal_submit/runOPAL_cmd_line.sh
-</file>
+
+
+
 
 <file name="/opt/opal/deployed/deploy.sh" mode="append">
 
 autoclickchem_ver=1.0
 autoclickchem_bin=/opt/autoclickchem
 if test -e $autoclickchem_bin; then
-    ant -f $OPALXML deploy -DserviceName=autoclickchem_${autoclickchem_ver} -DappConfig=$OPALCONFIG/autoclickchem_config.xml
+    $ANT -f $OPALXML deploy -DserviceName=autoclickchem_${autoclickchem_ver} -DappConfig=$OPALCONFIG/autoclickchem_config.xml
 fi
 </file>
 
 if test -d /opt/opal; then
   cd /opt/opal
-  su tomcat -c "ant deploy -DserviceName=autoclickchem_${autoclickchem_ver} -DappConfig=/opt/opal/configs/autoclickchem_config.xml"
+  autoclickchem_ver=1.0
+  su tomcat -c "/opt/rocks/bin/ant deploy -DserviceName=autoclickchem_${autoclickchem_ver} -DappConfig=/opt/opal/configs/autoclickchem_config.xml"
 fi
 
 </post>

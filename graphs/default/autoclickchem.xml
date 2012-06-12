@@ -13,6 +13,9 @@
 
 	<changelog>
 	$Log: autoclickchem.xml,v $
+	Revision 1.2  2012/06/12 19:36:43  clem
+	added autoclick chem
+	
 	Revision 1.1  2012/02/07 02:08:56  nadya
 	initial
 	
@@ -20,5 +23,12 @@
 
         <edge from="server" to="autoclickchem-server"/>
         <edge from="client" to="autoclickchem-client"/>
+
+	<!-- opal deployment -->
+	<edge from="client" to="autoclickchem-server" cond="opal_server"/>
+			
+	<order head="opal-common">
+		<tail>autoclickchem-server</tail>
+	</order>
 
 </graph>
