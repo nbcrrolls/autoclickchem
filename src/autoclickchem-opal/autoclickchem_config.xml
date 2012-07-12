@@ -1,6 +1,6 @@
 <appConfig xmlns="http://nbcr.sdsc.edu/opal/types"
            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <metadata appName="AutoClickChem 1.0">
+  <metadata appName="AutoClickChem 1..00">
     <usage><![CDATA[
 AutoClickChem is a computer program capable of performing click-chemistry reactions in silico. AutoClickChem can be used to produce large combinatorial libraries of compounds for use in virtual screens. As the compounds of these libraries are constructed according to the reactions of click chemistry, they can be easily synthesized for subsequent testing in biochemical assays. Additionally, in silico modeling of click-chemistry products may prove useful in rational drug design and drug optimization. 
 ]]></usage>
@@ -27,7 +27,7 @@ AutoClickChem is a computer program capable of performing click-chemistry reacti
                 <paramType>FILE</paramType>
                 <ioType>INPUT</ioType>
                 <textDesc>Reactant 1 in PDB, MOL2, MOL/SDF, or XYZ format. Multiple files can be placed in one ZIP file. (Ex. 
-                &lt;A HREF=http://www.nbcr.net/ws_help/AUTOCLICK/sample_inputs/reactant1.zip&gt;
+                &lt;A HREF=http://www.nbcr.net/wshelp/autoclickchem/sample_inputs/reactant1.zip&gt;
                 reactant1.zip
                 &lt;/A&gt;
                 ) (-reactants1 tag)</textDesc>
@@ -38,7 +38,7 @@ AutoClickChem is a computer program capable of performing click-chemistry reacti
                 <paramType>FILE</paramType>
                 <ioType>INPUT</ioType>
                 <textDesc>Reactant 2 in PDB, MOL2, MOL/SDF, or XYZ format. Multiple files can be placed in one ZIP file. (Ex. 
-                &lt;A HREF=http://www.nbcr.net/ws_help/AUTOCLICK/sample_inputs/reactant2.zip&gt;
+                &lt;A HREF=http://www.nbcr.net/wshelp/autoclickchem/sample_inputs/reactant2.zip&gt;
                 reactant2.zip
                 &lt;/A&gt;
                 ) (-reactants2 tag)</textDesc>
@@ -49,7 +49,7 @@ AutoClickChem is a computer program capable of performing click-chemistry reacti
                 <paramType>FILE</paramType>
                 <ioType>INPUT</ioType>
                 <textDesc>Configuration file (Ex.
-                &lt;A HREF=http://www.nbcr.net/ws_help/AUTOCLICK/sample_inputs/config.in&gt;
+                &lt;A HREF=http://www.nbcr.net/wshelp/autoclickchem/sample_inputs/config.in&gt;
                 config.in
                 &lt;/A&gt;
                 ) (-config tag)</textDesc>
