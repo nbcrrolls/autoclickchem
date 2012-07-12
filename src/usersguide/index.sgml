@@ -1,8 +1,4 @@
 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V3.1//EN" [
-	<!ENTITY preface    SYSTEM "preface.sgml">
-	<!ENTITY installing SYSTEM "installing.sgml">
-	<!ENTITY using SYSTEM "using.sgml">
-	<!ENTITY copyrights SYSTEM "copyrights.sgml">
 	<!ENTITY % entities SYSTEM "entities.sgml">
 	%entities;
 ]>
@@ -11,19 +7,8 @@
 <bookinfo>
 
 	<title> AutoClickChem Roll: Users Guide </title>
-
-	<subtitle>
-		<inlinemediaobject>
-			<imageobject>
-				<imagedata fileref="">
-			</imageobject>
-		</inlinemediaobject>
-	</subtitle>
-
 	<edition>Version &document-version;</edition>
-
 	<pubdate>&document-pubdate;</pubdate>
-
 	<copyright id="copyright" xreflabel="copyright">
 		<year>&document-year;</year>
 		<holder>&document-copyright;</holder>
@@ -35,10 +20,11 @@
 
 </bookinfo>
 
-&preface;
-&installing;
-&using;
-&copyrights;
+&source-preface;
+&source-requirements;
+&source-installing;
+&source-using;
+&source-copyrights;
 
 </book>
 

@@ -1,0 +1,27 @@
+<chapter id="requirements" xreflabel="Requirements">
+<title>Requirements</title>
+
+<para>
+The AutoClickChem roll is for use with Rocks &document-version;.
+</para>
+
+<para>
+You must install the following rolls before installing the AutoClickChem roll:
+</para>
+
+<itemizedlist>
+<listitem><para>
+Opal (NOTE: the opal roll requires a reboot)
+</para></listitem>
+<listitem><para>
+Openbabel 
+</para></listitem>
+</itemizedlist>
+
+<para>
+The default Opal roll installation confiures opal to wokr on port 8080. If your opal installation was changed to
+wok on a different port you must modify the files /var/www/html/autoclickchem/vars.ini and /var/www/html/autoclickchem/vars.default
+</para>
+
+</chapter>
+

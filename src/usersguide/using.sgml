@@ -1,9 +1,4 @@
 <chapter id="using" xreflabel="Using the AutoClickChem Roll">
-
-
-<title>Using the AutoClickChem Roll</title>
-
-<section id="using-autoclickchem" xreflabel="Using the autoclickchem roll">
 <title>Using the AutoClickChem Roll</title>
 
 <para>
@@ -16,11 +11,8 @@ Additionally, in silico modeling of click-chemistry products may prove useful in
 
 <para>
 Tutorials for using AutoClickChem and its components are available
-from the <ulink url="http://rocce.ucsd.edu/autoclickchem/tutorial.php">
-AutoClickChem web site</ulink>
+from the <ulink url="http://www2.nbcr.net/wordpress2/?page_id=1124"> NBCR web site</ulink>
 </para>
-
-</section>
 
 
 </chapter>
