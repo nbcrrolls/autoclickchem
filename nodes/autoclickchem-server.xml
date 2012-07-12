@@ -11,6 +11,9 @@
 
 	<changelog>
 	$Log: autoclickchem-server.xml,v $
+	Revision 1.4  2012/07/12 18:41:31  nadya
+	lower case for service name
+	
 	Revision 1.3  2012/06/23 02:44:47  clem
 	deploy.sh should not be executed in other roll (only opal runs it)
 	
@@ -29,7 +32,6 @@
 
 <post>
 
-
 SERVER_NAME="&opal_public_fqdn;"
 if [ "$SERVER_NAME" == "" ] ; then
 	#if this is a frontend installation the 
@@ -37,37 +39,30 @@ if [ "$SERVER_NAME" == "" ] ; then
 	SERVER_NAME="&Kickstart_PublicHostname;"
 fi
 
-
-
 <file name="/var/www/html/autoclickchem/vars.ini" perm="0644" vars="expanded">
 temp_write_dir	/tmp/autoclickchem_tmp/
 max_upload_size_in_bytes	1048576
 max_reactant_pairs_allowed	100
 opal_url_root	http://$SERVER_NAME/opal-jobs/
-WSDL_URL_for_programmatic_access	http://$SERVER_NAME/opal2/services/AutoClickChem
+WSDL_URL_for_programmatic_access	http://$SERVER_NAME/opal2/services/autoclickchem
 location_of_opal_submission_script	/opt/autoclickchem/opal_submit/runOPAL_cmd_line.sh
 </file>
-
 
 <file name="/var/www/html/autoclickchem/vars.ini" perm="0644">
 temp_write_dir	/tmp/autoclickchem_tmp/
 max_upload_size_in_bytes	1048576
 max_reactant_pairs_allowed	100
 opal_url_root	http://$SERVER_NAME/opal-jobs/
-WSDL_URL_for_programmatic_access	http://$SERVER_NAME/opal2/services/AutoClickChem
+WSDL_URL_for_programmatic_access	http://$SERVER_NAME/opal2/services/autoclickchem
 location_of_opal_submission_script	/opt/autoclickchem/opal_submit/runOPAL_cmd_line.sh
 </file>
-
-
-
-
 
 <file name="/opt/opal/deployed/deploy.sh" mode="append">
 
 autoclickchem_ver=1.0
 autoclickchem_bin=/opt/autoclickchem
 if test -e $autoclickchem_bin; then
-    $ANT -f $OPALXML deploy -DserviceName=autoclickchem_${autoclickchem_ver} -DappConfig=$OPALCONFIG/autoclickchem_config.xml
+    $ANT -f $OPALXML deploy -DserviceName=autoclickchem_${autoclickchem_ver} -DappConfig=$OPALCONFIG/autoclickchem_${autoclickchem_ver}.xml
 fi
 </file>
 
