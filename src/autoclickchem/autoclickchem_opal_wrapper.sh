@@ -1,6 +1,6 @@
 #!/bin/bash                                                                                                                    
 
-AUTOCLICK=/opt/autoclickchem/autoclickchem.py
+AUTOCLICK=/opt/autoclickchem/bin/autoclickchem.py
 
 # locate babel
 if [ -f /etc/profile.d/rocks-openbabel.sh ] ; then 
