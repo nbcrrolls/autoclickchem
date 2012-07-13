@@ -3,8 +3,8 @@
 AUTOCLICK=/opt/autoclickchem/autoclickchem.py
 
 # locate babel
-if [ -f /etc/profile.d/babel.sh ] ; then 
-	 . /etc/profile.d/babel.sh
+if [ -f /etc/profile.d/rocks-openbabel.sh ] ; then 
+	 . /etc/profile.d/rocks-openbabel.sh
 fi
 
 BABEL=`which babel 2>/dev/null`
