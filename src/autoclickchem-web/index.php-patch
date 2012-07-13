@@ -1,0 +1,8 @@
+--- autoclickchem-web-1.0.0/index.php	2011-10-03 21:50:18.000000000 -0700
++++ autoclickchem-web-1.0.0-new/index.php	2012-07-12 18:34:01.440464427 -0700
+@@ -1,4 +1,4 @@
+-<? # If no specific file is specified, redirect the user to library_1.php
++<?php # If no specific file is specified, redirect the user to library_1.php
+ 
+ $dir=dirname($_SERVER['SCRIPT_NAME']);
+ 
