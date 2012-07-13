@@ -11,6 +11,9 @@
 
 	<changelog>
 	$Log: autoclickchem-server.xml,v $
+	Revision 1.7  2012/07/13 19:29:46  nadya
+	add autoclickchem package to server
+	
 	Revision 1.6  2012/07/13 01:43:29  nadya
 	fix package name
 	
@@ -31,6 +34,7 @@
 	</changelog>
 
 	<package>autoclickchem-web</package>
+	<package>autoclickchem</package>
 	<package>roll-autoclickchem-usersguide</package>
         <package>autoclickchem-opal</package>
 
@@ -64,11 +68,13 @@ location_of_opal_submission_script	/opt/autoclickchem/opal_submit/runOPAL_cmd_li
 if [ -d /opt/opal ]; then
 <file name="/opt/opal/deployed/deploy.sh" mode="append">
 
+# autoclickchem
 autoclickchem_ver=1.0.0
-autoclickchem_bin=/opt/autoclickchem
+autoclickchem_bin=/opt/autoclickchem/bin/autoclickchem.sh
 if test -e $autoclickchem_bin; then
     $ANT -f $OPALXML deploy -DserviceName=autoclickchem_${autoclickchem_ver} -DappConfig=$OPALCONFIG/autoclickchem_${autoclickchem_ver}.xml
 fi
+
 </file>
 fi
 
