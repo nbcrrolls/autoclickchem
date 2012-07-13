@@ -11,6 +11,9 @@
 
 	<changelog>
 	$Log: autoclickchem-server.xml,v $
+	Revision 1.5  2012/07/13 00:36:34  nadya
+	use verson in service deployment
+	
 	Revision 1.4  2012/07/12 18:41:31  nadya
 	lower case for service name
 	
@@ -22,8 +25,6 @@
 	
 	Revision 1.1  2012/02/07 02:08:56  nadya
 	initial
-	
-	
 	</changelog>
 
 	<package>autoclickchem-web</package>
@@ -44,27 +45,30 @@ temp_write_dir	/tmp/autoclickchem_tmp/
 max_upload_size_in_bytes	1048576
 max_reactant_pairs_allowed	100
 opal_url_root	http://$SERVER_NAME/opal-jobs/
-WSDL_URL_for_programmatic_access	http://$SERVER_NAME/opal2/services/autoclickchem
+WSDL_URL_for_programmatic_access	http://$SERVER_NAME/opal2/services/autoclickchem_1.0.0
 location_of_opal_submission_script	/opt/autoclickchem/opal_submit/runOPAL_cmd_line.sh
 </file>
 
-<file name="/var/www/html/autoclickchem/vars.ini" perm="0644">
+<file name="/var/www/html/autoclickchem/vars.default" perm="0644">
 temp_write_dir	/tmp/autoclickchem_tmp/
 max_upload_size_in_bytes	1048576
 max_reactant_pairs_allowed	100
 opal_url_root	http://$SERVER_NAME/opal-jobs/
-WSDL_URL_for_programmatic_access	http://$SERVER_NAME/opal2/services/autoclickchem
+WSDL_URL_for_programmatic_access	http://$SERVER_NAME/opal2/services/autoclickchem_1.0.0
 location_of_opal_submission_script	/opt/autoclickchem/opal_submit/runOPAL_cmd_line.sh
 </file>
 
+if [ -d /opt/opal ]; then
 <file name="/opt/opal/deployed/deploy.sh" mode="append">
 
-autoclickchem_ver=1.0
+autoclickchem_ver=1.0.0
 autoclickchem_bin=/opt/autoclickchem
 if test -e $autoclickchem_bin; then
     $ANT -f $OPALXML deploy -DserviceName=autoclickchem_${autoclickchem_ver} -DappConfig=$OPALCONFIG/autoclickchem_${autoclickchem_ver}.xml
 fi
 </file>
+fi
 
 </post>
 
+</kickstart>
