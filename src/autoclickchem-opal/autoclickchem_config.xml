@@ -1,6 +1,6 @@
 <appConfig xmlns="http://nbcr.sdsc.edu/opal/types"
            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <metadata appName="AutoClickChem 1..00">
+  <metadata appName="AutoClickChem 1.0.0">
     <usage><![CDATA[
 AutoClickChem is a computer program capable of performing click-chemistry reactions in silico. AutoClickChem can be used to produce large combinatorial libraries of compounds for use in virtual screens. As the compounds of these libraries are constructed according to the reactions of click chemistry, they can be easily synthesized for subsequent testing in biochemical assays. Additionally, in silico modeling of click-chemistry products may prove useful in rational drug design and drug optimization. 
 ]]></usage>
@@ -74,6 +74,6 @@ AutoClickChem is a computer program capable of performing click-chemistry reacti
 
       </types>
   </metadata>
-  <binaryLocation>/opt/autoclickchem/autoclickchem_opal_wrapper.sh</binaryLocation>
+  <binaryLocation>/opt/autoclickchem/bin/autoclickchem.sh</binaryLocation>
   <parallel>false</parallel>
 </appConfig>
