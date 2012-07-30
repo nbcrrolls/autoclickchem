@@ -1,9 +1,12 @@
-# $Id: Makefile,v 1.2 2012/07/13 01:36:36 nadya Exp $
+# $Id: Makefile,v 1.3 2012/07/30 22:28:23 nadya Exp $
 #
 # @Copyright@
 # @Copyright@
 #
 # $Log: Makefile,v $
+# Revision 1.3  2012/07/30 22:28:23  nadya
+# add patch for called service name
+#
 # Revision 1.2  2012/07/13 01:36:36  nadya
 # fix sloppy php header
 #
@@ -24,6 +27,7 @@ version.mk: version.mk.in
 build:
 	tar xvjf $(NAME)-$(VERSION).tar.bz2
 	patch -p0 < index.php-patch
+	patch -p0 < execution.php-patch
 
 install::
 	mkdir -p $(ROOT)/$(PKGROOT)

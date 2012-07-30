@@ -1,0 +1,13 @@
+--- autoclickchem-web-1.0.0/execution.php	2011-10-03 21:44:30.000000000 -0700
++++ autoclickchem-web-1.0.0-new/execution.php	2012-07-30 14:37:44.087464543 -0700
+@@ -124,8 +124,8 @@
+ 		die();
+ 	}
+ 
+-        $userid2 = explode("appAutoClickChem",$output);
+-        $userid2 = "appAutoClickChem".$userid2[1];
++        $userid2 = explode("appautoclickchem",$output);
++        $userid2 = "appautoclickchem".$userid2[1];
+ 
+ 	# Let the user know that their job has been submitted.
+ 	echo 'Your job has been submitted!<br/><br/>Click here to <a href="execution.php?userid='.$userid.'&userid2='.$userid2.'">check your job\'s progress</a>.';
