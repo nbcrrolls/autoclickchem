@@ -11,6 +11,9 @@
 
 	<changelog>
 	$Log: autoclickchem-server.xml,v $
+	Revision 1.8  2013/01/24 23:18:23  nadya
+	need php packages (not installed by defualt on 6.*) for CGI php interface
+	
 	Revision 1.7  2012/07/13 19:29:46  nadya
 	add autoclickchem package to server
 	
@@ -33,6 +36,9 @@
 	initial
 	</changelog>
 
+	<package>php</package>
+	<package>php-gd</package>
+	<package>php-mysql</package>
 	<package>autoclickchem-web</package>
 	<package>autoclickchem</package>
 	<package>roll-autoclickchem-usersguide</package>
