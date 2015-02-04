@@ -71,19 +71,6 @@ WSDL_URL_for_programmatic_access	http://$SERVER_NAME/opal2/services/autoclickche
 location_of_opal_submission_script	/opt/autoclickchem/opal_submit/runOPAL_cmd_line.sh
 </file>
 
-if [ -d /opt/opal ]; then
-<file name="/opt/opal/deployed/deploy.sh" mode="append">
-
-# autoclickchem
-autoclickchem_ver=1.0.0
-autoclickchem_bin=/opt/autoclickchem/bin/autoclickchem.sh
-if test -e $autoclickchem_bin; then
-    $ANT -f $OPALXML deploy -DserviceName=autoclickchem_${autoclickchem_ver} -DappConfig=$OPALCONFIG/autoclickchem_${autoclickchem_ver}.xml
-fi
-
-</file>
-fi
-
 </post>
 
 </kickstart>
