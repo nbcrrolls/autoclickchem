@@ -27,7 +27,7 @@ AutoClickChem is a computer program capable of performing click-chemistry reacti
                 <paramType>FILE</paramType>
                 <ioType>INPUT</ioType>
                 <textDesc>Reactant 1 in PDB, MOL2, MOL/SDF, or XYZ format. Multiple files can be placed in one ZIP file. (Ex. 
-                &lt;A HREF=http://www.nbcr.net/data/docs/wshelp/autoclickchem/input/reactant1.zip&gt;
+                &lt;A HREF=http://nbcr.ucsd.edu/data/docs/wshelp/autoclickchem/input/reactant1.zip&gt;
                 reactant1.zip
                 &lt;/A&gt;
                 ) (-reactants1 tag)</textDesc>
@@ -38,7 +38,7 @@ AutoClickChem is a computer program capable of performing click-chemistry reacti
                 <paramType>FILE</paramType>
                 <ioType>INPUT</ioType>
                 <textDesc>Reactant 2 in PDB, MOL2, MOL/SDF, or XYZ format. Multiple files can be placed in one ZIP file. (Ex. 
-                &lt;A HREF=http://www.nbcr.net/data/docs/wshelp/autoclickchem/input/reactant2.zip&gt;
+                &lt;A HREF=http://nbcr.ucsd.edu/data/docs/wshelp/autoclickchem/input/reactant2.zip&gt;
                 reactant2.zip
                 &lt;/A&gt;
                 ) (-reactants2 tag)</textDesc>
@@ -49,7 +49,7 @@ AutoClickChem is a computer program capable of performing click-chemistry reacti
                 <paramType>FILE</paramType>
                 <ioType>INPUT</ioType>
                 <textDesc>Configuration file (Ex.
-                &lt;A HREF=http://www.nbcr.net/data/docs/wshelp/autoclickchem/input/config.in&gt;
+                &lt;A HREF=http://nbcr.ucsd.edu/data/docs/wshelp/autoclickchem/input/config.in&gt;
                 config.in
                 &lt;/A&gt;
                 ) (-config tag)</textDesc>
